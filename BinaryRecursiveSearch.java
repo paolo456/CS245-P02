@@ -1,4 +1,4 @@
-package edu.usfca.cs.cs245;
+//package edu.usfca.cs.cs245;
 
 public class BinaryRecursiveSearch implements Practice2Search{
 
@@ -18,11 +18,26 @@ public class BinaryRecursiveSearch implements Practice2Search{
 			return -1;
 		if(arr[mid] == target)
 			return mid;
-		if(arr[mid] < target){
+		if(arr[mid] < target){ // Do not leave random white space inbetween lines.  Makes it confusing to look at.
 			
 			return search(arr, target, mid+1, max);
 		}
 		
+		/*
+		The standard for connected logic statements is to have:
+
+		if (...) {
+			...	
+		} else if (...) {
+			...
+		} else {
+			...
+		}
+
+
+		Also, it is highly suggested to always put curly brackets with your loops and
+		conditionals to make it very clear what is happening.
+		*/
 		else{
 			return search(arr, target, min, mid-1);
 		}
